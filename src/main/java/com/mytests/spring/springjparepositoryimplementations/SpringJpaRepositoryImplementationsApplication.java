@@ -17,7 +17,7 @@ public class SpringJpaRepositoryImplementationsApplication implements CommandLin
 
     @Override
     public void run(String... args) throws Exception {
-        for (Person person : repo.getByAddressContains("Russia")) {
+        for (Person person : repo.searchBySpecifiedAddress("Russia")) {
             System.out.println(person.toString());
         }
     }

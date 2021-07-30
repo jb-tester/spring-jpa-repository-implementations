@@ -11,5 +11,5 @@ import java.util.List;
  * *
  */
 public interface CustomPersonRepository {
-    List<Person> getByAddressContains(String addr);
+    List<Person> searchBySpecifiedAddress(String addr);
 }
