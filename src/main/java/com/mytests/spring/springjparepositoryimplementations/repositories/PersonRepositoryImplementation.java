@@ -4,6 +4,7 @@ import com.mytests.spring.springjparepositoryimplementations.data.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * <p>Project: spring-jpa-repository-implementations</p>
  * *
  */
-public class PersonRepositoryImpl implements CustomPersonRepository {
+public class PersonRepositoryImplementation implements CustomPersonRepository {
 
     @Autowired
     EntityManager entityManager;
@@ -21,7 +22,7 @@ public class PersonRepositoryImpl implements CustomPersonRepository {
     @Override
     public List<Person> searchBySpecifiedAddress(String addr) {
         Query query = entityManager.createNativeQuery("SELECT p.* FROM Person as p " +
-                "WHERE p.address NOT LIKE ?", Person.class);
+                "WHERE p.address LIKE ?", Person.class);
         query.setParameter(1, addr + "%");
 
         return query.getResultList();
