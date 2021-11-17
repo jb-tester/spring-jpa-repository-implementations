@@ -12,11 +12,12 @@ import java.util.List;
  * *
  * <p>Created by irina on 30.07.2021.</p>
  * <p>Project: spring-jpa-repository-implementations</p>
- * *
+ * <p> Class should be recognized as bean and shown as used: </p>
+ * <a href="https://youtrack.jetbrains.com/issue/IDEA-171430">IDEA-171430</a>
  */
 public class PersonRepositoryImplementation implements CustomPersonRepository {
 
-    @Autowired
+   @Autowired
     EntityManager entityManager;
     
     @Override
