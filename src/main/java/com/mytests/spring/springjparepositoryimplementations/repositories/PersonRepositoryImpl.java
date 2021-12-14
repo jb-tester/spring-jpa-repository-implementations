@@ -20,6 +20,7 @@ public class PersonRepositoryImpl implements CustomPersonRepository {
     
     @Override
     public List<Person> searchBySpecifiedAddress(String addr) {
+        System.out.println("PersonRepositoryImpl.searchBySpecifiedAddress");
         Query query = entityManager.createNativeQuery("SELECT p.* FROM Person as p " +
                 "WHERE p.address NOT LIKE ?", Person.class);
         query.setParameter(1, addr + "%");

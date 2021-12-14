@@ -22,6 +22,7 @@ public class PersonRepositoryImplementation implements CustomPersonRepository {
     
     @Override
     public List<Person> searchBySpecifiedAddress(String addr) {
+        System.out.println("PersonRepositoryImplementation.searchBySpecifiedAddress");
         Query query = entityManager.createNativeQuery("SELECT p.* FROM Person as p " +
                 "WHERE p.address LIKE ?", Person.class);
         query.setParameter(1, addr + "%");

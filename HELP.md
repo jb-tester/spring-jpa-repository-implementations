@@ -11,3 +11,7 @@ https://youtrack.jetbrains.com/issue/IDEA-171430
 The custom repository fragment implementation is shown as unused and is not recognized as bean:
 
 https://youtrack.jetbrains.com/issue/IDEA-282697
+
+The custom postfix should be considered for the fragments also:
+
+https://youtrack.jetbrains.com/issue/IDEA-284883
