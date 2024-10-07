@@ -2,8 +2,8 @@ package com.mytests.spring.springjparepositoryimplementations.repositories;
 
 import com.mytests.spring.springjparepositoryimplementations.data.Tab1Entity;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import java.util.List;
 
 /**

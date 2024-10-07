@@ -3,7 +3,7 @@ package com.mytests.spring.springjparepositoryimplementations.repositories;
 import com.mytests.spring.springjparepositoryimplementations.data.Tab1Entity;
 import org.springframework.data.jpa.repository.Modifying;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -16,6 +16,7 @@ public interface Tab1CustomRepository {
 
     List<Tab1Entity> getAllWithEmptyFirstnameAndLastname();
 
+    // Check for @Modifying here
     @Modifying @Transactional
     void repair();
 }

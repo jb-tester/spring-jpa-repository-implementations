@@ -3,8 +3,8 @@ package com.mytests.spring.springjparepositoryimplementations.repositories;
 import com.mytests.spring.springjparepositoryimplementations.data.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import java.util.List;
 
 /**

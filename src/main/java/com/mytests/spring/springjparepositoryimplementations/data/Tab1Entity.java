@@ -1,6 +1,6 @@
 package com.mytests.spring.springjparepositoryimplementations.data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * *
